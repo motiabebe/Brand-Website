@@ -1,3 +1,28 @@
 .bg-black {
     background-color: #000000;
 }
+#home {
+    background-color: #242424;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/39cUWRCccCedYXjad33wLf.jpg");
+    background-blend-mode: overlay;
+}
+#home > #carouselExampleInterval {
+    /* smooth transition */
+    transition: all 1s ease-in-out;
+}
+#specs {
+    background-color: #3b3b3b;
+    background-image: url("https://cdn.ytechb.com/wp-content/uploads/2023/02/Samsung-Galaxy-S23-Dex-Wallpaper-2-YTECHB.webp");
+    background-blend-mode: overlay;
+}
+#promotion > .row > :nth-child(1) {
+    /* background-color: #fbfbfb; */
+    background-image: url("https://junction27.co.uk/wp-content/uploads/2023/02/currys-samsung-banner.png");
+    background-blend-mode: overlay;
+    background-position: center;
+    /* make transiton smooth */
+    transition: all 0.5s ease-in-out;
+}
+#footer {
+    background-color: #0f0e0f;
+}

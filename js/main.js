@@ -78,8 +78,8 @@ phones.forEach((phone) => {
                 <h5 class="card-title h5">${phone.name}</h5>
                 <p class="card-text small">${phone.description}</p>
                 <p class="card-text h3"><span class="text-decoration-line-through text-danger h1">$${phone.old_price}</span>  $${phone.price}</p>
-                <a href="#" class="btn btn-outline-dark rounder">Buy now</a>
-                <a href="#" class="btn bg-black btn-dark rounder">Learn more</a>
+                <a href="" class="btn btn-outline-dark rounder">Buy now</a>
+                <a href="#specs" class="btn bg-black btn-dark rounder">Learn more</a>
             </div>
         </div>
     </div>`
@@ -89,5 +89,40 @@ phones.forEach((phone) => {
 
 
 
+
+
+
+const promotionImage = document.getElementById("promotion-image");
+
+// a function that changes the background position of the promotion image
+function changeBackgroundPosition() {
+    setTimeout(() => {
+        promotionImage.style.backgroundPosition = "left";
+    }, 3000);
+    setTimeout(() => {
+        promotionImage.style.backgroundPosition = "center";
+    }, 6000);
+    // setTimeout(() => {
+    //     // make transition smooth
+    //     promotionImage.style.transition = "background-size 2s e";
+    //     promotionImage.style.backgroundSize = "cover";
+    // }
+    // , 9000);
+}
+
+function isInViewport(element) {
+    var bounding = element.getBoundingClientRect();
+    return (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.bottom <= window.innerHeight &&
+      bounding.right <= window.innerWidth
+    );
+  }
+  
+// call the function when it's in the viewport
+if (isInViewport(promotionImage)) {
+    changeBackgroundPosition();
+}
 
 
