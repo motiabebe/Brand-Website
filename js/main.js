@@ -3,63 +3,63 @@ const phones = [
         name: "Samsung Galaxy S20",
         old_price: 999,
         price: 799,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s20-2.jpg",
+        image: "../img/phones/S20.jpg",
         description: "6.2-inch AMOLED display, triple-lens rear camera, 10MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S20+",
         old_price: 1199,
         price: 999,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s20-plus-1.jpg",
+        image: "../img/phones/S20+.jpg",
         description: "6.7-inch AMOLED display, triple-lens rear camera, 10MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S20 Ultra",
         old_price: 1399,
         price: 1199,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s20-ultra-10.jpg",
+        image: "../img/phones/S20Ultra.jpg",
         description: "6.9-inch AMOLED display, quad-lens rear camera, 40MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S21 5G",
         old_price: 1099,
         price: 899,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-5g-1.jpg",
+        image: "../img/phones/S215G.jpg",
         description: "6.2-inch AMOLED display, triple-lens rear camera, 40MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S21+ 5G",
         old_price: 1299,
         price: 1099,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-plus-5g-1.jpg",
+        image: "../img/phones/S21+5G.jpg",
         description: "6.7-inch AMOLED display, triple-lens rear camera, 40MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S21 Ultra 5G",
         old_price: 1499,
         price: 1299,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-1.jpg",
+        image: "../img/phones/S21Ultra5G.jpg",
         description: "6.8-inch AMOLED display, quad-lens rear camera, 40MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S22 5G",
         old_price: 1199,
         price: 999,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-5g-2.jpg",
+        image: "../img/phones/S225G.jpg",
         description: "6.1-inch AMOLED display, triple-lens rear camera, 10MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S22+ 5G",
         old_price: 1499,
         price: 1299,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-plus-5g-2.jpg",
+        image: "../img/phones/S22+5G.jpg",
         description: "6.6-inch AMOLED display, triple-lens rear camera, 10MP front-facing camera",
     },
     {
         name: "Samsung Galaxy S22 Ultra 5G",
         old_price: 1699,
         price: 1499,
-        image: "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-ultra-5g-2.jpg",
+        image: "../img/phones/S22Ultra5G.jpg",
         description: "6.8-inch AMOLED display, quad-lens rear camera, 40MP front-facing camera",
     },
 ];
@@ -72,10 +72,10 @@ phones.forEach((phone) => {
     exploreSection.innerHTML += `                
     <div class="col-lg-3 col-sm-12">
         <div class="card border-0">
-            <img src="${phone.image}" class="card-img-top">
+            <img src="${phone.image}" class="card-img-top" alt="${phone.name}">
             <!-- 456 466 -->
             <div class="card-body rounded-bottom py-4">
-                <h5 class="card-title h5">${phone.name}</h5>
+                <p class="card-title h5">${phone.name}</p>
                 <p class="card-text small">${phone.description}</p>
                 <p class="card-text h3"><span class="text-decoration-line-through text-danger h1">$${phone.old_price}</span>  $${phone.price}</p>
                 <a href="" class="btn btn-outline-dark rounder">Buy now</a>
@@ -86,15 +86,8 @@ phones.forEach((phone) => {
 });
 
 
-
-
-
-
-
-
 const promotionImage = document.getElementById("promotion-image");
 
-// a function that changes the background position of the promotion image
 function changeBackgroundPosition() {
     setTimeout(() => {
         promotionImage.style.backgroundPosition = "left";
@@ -102,27 +95,17 @@ function changeBackgroundPosition() {
     setTimeout(() => {
         promotionImage.style.backgroundPosition = "center";
     }, 6000);
-    // setTimeout(() => {
-    //     // make transition smooth
-    //     promotionImage.style.transition = "background-size 2s e";
-    //     promotionImage.style.backgroundSize = "cover";
-    // }
-    // , 9000);
+    setTimeout(() => {
+        // make transition smooth
+        promotionImage.style.transition = "background-size 2s ease-in-out";
+        promotionImage.style.backgroundSize = "cover";
+    }
+    , 9000);
+    // console.log("changed");
+    setInterval(changeBackgroundPosition, 20000)
 }
 
-function isInViewport(element) {
-    var bounding = element.getBoundingClientRect();
-    return (
-      bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.bottom <= window.innerHeight &&
-      bounding.right <= window.innerWidth
-    );
-  }
-  
-// call the function when it's in the viewport
-if (isInViewport(promotionImage)) {
-    changeBackgroundPosition();
-}
+changeBackgroundPosition();
+
 
 
