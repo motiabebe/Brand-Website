@@ -87,15 +87,18 @@ const promotionImage = document.getElementById("promotion-image");
 
 function changeBackgroundPosition() {
     setTimeout(() => {
+        promotionImage.style.backgroundSize = "initial";
         promotionImage.style.backgroundPosition = "left";
     }, 3000);
     setTimeout(() => {
+        promotionImage.style.backgroundSize = "initial";
         promotionImage.style.backgroundPosition = "center";
     }, 6000);
     setTimeout(() => {
         promotionImage.style.transition = "background-size 2s ease-in-out";
         promotionImage.style.backgroundSize = "cover";
     }, 9000);
+    setInterval(changeBackgroundPosition, 12000)
 }
 
 changeBackgroundPosition();
