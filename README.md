@@ -1,10 +1,11 @@
 # Brand-Website
 
-## Week 2
+## Week 2 - Web Technologies
+### Samsung Galaxy S Series
 
-Making a brand website using Bootstrap 5
+Create a brand website using Bootstrap 5
 
 Icons - FontAwesome (https://fontawesome.com)
 
-Languages HTML, CSS & JS
+Technologies used: HTML, CSS & JS
 
