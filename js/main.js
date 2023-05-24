@@ -108,6 +108,7 @@ function changeBackgroundPosition() {
     setTimeout(() => {
         promotionImage.style.backgroundSize = "cover";
     }, 22000);
+    setInterval(changeBackgroundPosition, 30000);
 }
 
 changeBackgroundPosition();
