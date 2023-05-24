@@ -64,9 +64,7 @@ const phones = [
     },
 ];
 
-
 const exploreSection = document.getElementById("explore-phones");
-
 
 phones.forEach((phone) => {
     exploreSection.innerHTML += `                
@@ -84,7 +82,6 @@ phones.forEach((phone) => {
         </div>
     </div>`
 });
-
 
 const promotionImage = document.getElementById("promotion-image");
 
