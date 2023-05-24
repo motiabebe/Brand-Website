@@ -98,8 +98,6 @@ function changeBackgroundPosition() {
         promotionImage.style.backgroundSize = "cover";
     }
     , 9000);
-    // console.log("changed");
-    setInterval(changeBackgroundPosition, 15000)
 }
 
 changeBackgroundPosition();
