@@ -95,10 +95,11 @@ function changeBackgroundPosition() {
         promotionImage.style.backgroundPosition = "left";
     }, 8000);
     setTimeout(() => {
-        promotionImage.style.backgroundSize = "cover";
+        promotionImage.style.backgroundSize = "initial";
+        promotionImage.style.backgroundPosition = "center";        
     }, 11000);
     setTimeout(() => {
-        promotionImage.style.backgroundPosition = "center";
+        promotionImage.style.backgroundPosition = "right";
     }, 16000);
     setTimeout(() => {
         promotionImage.style.backgroundSize = "initial";
