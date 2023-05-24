@@ -93,11 +93,9 @@ function changeBackgroundPosition() {
         promotionImage.style.backgroundPosition = "center";
     }, 6000);
     setTimeout(() => {
-        // make transition smooth
         promotionImage.style.transition = "background-size 2s ease-in-out";
         promotionImage.style.backgroundSize = "cover";
-    }
-    , 9000);
+    }, 9000);
 }
 
 changeBackgroundPosition();
