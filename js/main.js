@@ -102,7 +102,7 @@ function changeBackgroundPosition() {
     }
     , 9000);
     // console.log("changed");
-    setInterval(changeBackgroundPosition, 20000)
+    setInterval(changeBackgroundPosition, 15000)
 }
 
 changeBackgroundPosition();
